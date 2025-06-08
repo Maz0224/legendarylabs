@@ -2,73 +2,84 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Legendary Labs</title>
 <style>
-  html, body {
+  /* Reset default margin/padding */
+  * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body, html {
     height: 100%;
     font-family: Arial, sans-serif;
-    background: url('/images/background') no-repeat center center fixed;
+  }
+  body {
+    /* Background image - easy to change */
+    background: url('images/background') no-repeat center center fixed;
     background-size: cover;
-    color: white;
+    display: flex;
+    flex-direction: column;
+    color: blue;
   }
   header {
+    padding: 20px;
     text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
     color: blue;
-    -webkit-text-stroke: 1px black;
-    font-size: 3em;
-    margin-top: 20px;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    user-select: none;
   }
-  .section-title {
-    text-align: center;
-    font-size: 2em;
-    margin: 10px 0;
-  }
-  .divider {
-    height: 2px;
-    background: black;
-    width: 80%;
-    margin: 0 auto 20px auto;
-  }
-  .games-container {
+  main {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .games-row {
+  ul.game-list {
+    list-style: none;
     display: flex;
+    flex-direction: column;
     gap: 20px;
   }
-  .game img {
-    width: 100px;
-    height: 100px;
+  ul.game-list li a {
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px; /* Set width of each game image */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+  }
+  ul.game-list li a:hover {
+    transform: scale(1.05);
+  }
+  ul.game-list li a img {
+    display: block;
+    width: 100%;
+    height: auto;
     object-fit: cover;
-    border: 2px solid black;
-    border-radius: 5px;
   }
 </style>
 </head>
 <body>
-  <header>Legendary Labs</header>
-  <div class="section-title">Our Games</div>
-  <div class="divider"></div>
-  <div class="games-container">
-    <div class="games-row">
-      <a href="https://example1.com" class="game">
-        <img src="/images/game1.png" alt="Game 1">
-      </a>
-      <a href="https://example2.com" class="game">
-        <img src="/images/game2.png" alt="Game 2">
-      </a>
-      <a href="https://example3.com" class="game">
-        <img src="/images/game3.png" alt="Game 3">
-      </a>
-      <a href="https://example4.com" class="game">
-        <img src="/images/game4.png" alt="Game 4">
-      </a>
-    </div>
-  </div>
+  <header>LEGENDARY LABS</header>
+  <main>
+    <ul class="game-list">
+      <!-- Example game entries -->
+      <li>
+        <a href="https://example.com/game1" target="_blank" rel="noopener noreferrer">
+          <img src="images/game1.png" alt="Game 1" />
+        </a>
+      </li>
+      <li>
+        <a href="https://example.com/game2" target="_blank" rel="noopener noreferrer">
+          <img src="images/game2.png" alt="Game 2" />
+        </a>
+      </li>
+      <!-- Add more games here by copying the <li> block and updating the href and img src -->
+    </ul>
+  </main>
 </body>
 </html>
