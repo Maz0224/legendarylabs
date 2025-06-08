@@ -10,50 +10,42 @@
     font-family: Arial, sans-serif;
     background: url('/images/background') no-repeat center center fixed;
     background-size: cover;
-    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
   header {
     text-align: center;
-    font-size: 2em;
-    font-weight: bold;
-    text-transform: uppercase;
     color: blue;
     -webkit-text-stroke: 1px black;
-    margin-top: 20px;
+    font-size: 3em;
+    margin: 20px 0;
   }
   .section-title {
     text-align: center;
-    font-size: 1.5em;
-    margin: 20px 0;
+    font-size: 2em;
+    margin: 10px 0;
   }
   .divider {
     height: 2px;
-    background: white;
-    margin: 10px auto;
+    background: black;
+    margin: 0 auto 20px auto;
     width: 80%;
   }
   .games-row {
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
-    margin: 20px;
-  }
-  .game {
-    width: 100px;
-    height: 100px;
-    background: rgba(0, 0, 0, 0.3);
-    border: 2px solid white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 20px;
   }
   .game img {
-    width: 100%;
-    height: 100%;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
-    border-radius: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
   }
 </style>
 </head>
